@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">生产订单确认</string>
+    <string name="action_settings">Settings</string>
+
+    <!--页面字段-->
+    <string name="zipcode">托盘编号:</string>
+    <string name="ok">入库确认</string>
+    <string name="exit">退出</string>
+    <string name="cancel">取消</string>
+    <string name="zkurno">客户码/流水码:</string>
+    <string name="name1">客户名称:</string>
+    <string name="matnr">产品编号:</string>
+    <string name="maktx">产品名称:</string>
+    <string name="zproddate">生产日期:</string>
+    <string name="zcupno">批次编号:</string>
+    <string name="number">未收数量:</string>
+    <string name="menge">入库数量:</string>
+    <string name="meins">入库单位:</string>
+    <string name="zgrdate">入库时间：</string>
+    <string name="lgort">库存地:</string>
+    <string name="werksList">请选择工厂:</string>
+</resources>

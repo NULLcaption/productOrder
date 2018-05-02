@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cxg.productionorder.activity.activity.ProductionOrderActivity"
+    tools:showIn="@layout/activity_production_order">
+
+    <!--这是占位符-->
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:digits="@+id/text"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </TableRow>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--物料信息详单数据-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/zipcode"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/zipcode"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+                        android:imeOptions="actionSearch"
+                        android:singleLine="true"
+                        android:hint="请输入托盘编码"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </EditText>
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/zkurno"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/zkurno"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/name1"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/name1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/matnr"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/matnr"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/maktx"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/maktx"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </TextView>
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/zproddate"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/zproddate"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/zcupno"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/zcupno"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp">
+
+                        <requestFocus />
+                    </TextView>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/number"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/wsmng"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/menge"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/menge"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+
+
+                    </EditText>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/meins"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/meins"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/holo_blue_bright"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+
+
+                    </EditText>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/lgort"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/lgort"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/holo_blue_bright"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+
+
+                    </EditText>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:digits="@+id/text"
+                        android:text="@string/zgrdate"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/zgrdate"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/Menge"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/Meins"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/Charg"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.70"
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp">
+
+                        <requestFocus/>
+                    </TextView>
+                </TableRow>
+
+                <!--按钮操作-->
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/ok"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dip"
+                        android:layout_weight="0.30"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/ok"/>
+
+                    <Button
+                        android:id="@+id/cancel"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dip"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/cancel" />
+
+                    <Button
+                        android:id="@+id/exit"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dip"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.30"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/exit"/>
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
