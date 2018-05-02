@@ -104,24 +104,32 @@ public class ProductionOrderActivity extends AppCompatActivity {
         //托盘编码
         zipcode = (EditText) findViewById(R.id.zipcode);
         zipcode.setInputType(InputType.TYPE_NULL);//隐藏键盘
-        zipcode.setOnEditorActionListener(EnterListener);//回车键监听
+//        zipcode.setOnEditorActionListener(EnterListener);//回车键监听
         zipcode.addTextChangedListener(textWatcher);//输入完成后监听
         //客户码
         zkurno = (TextView) findViewById(R.id.zkurno);
+        zkurno.setFocusable(false);
         //客户名称
         name1 = (TextView) findViewById(R.id.name1);
+        name1.setFocusable(false);
         //产品代码
         matnr = (TextView) findViewById(R.id.matnr);
+        matnr.setFocusable(false);
         //产品名称
         maktx = (TextView) findViewById(R.id.maktx);
+        maktx.setFocusable(false);
         //生产日期
         zproddate = (TextView) findViewById(R.id.zproddate);
+        zproddate.setFocusable(false);
         //批次编号
         zcupno = (TextView) findViewById(R.id.zcupno);
+        zcupno.setFocusable(false);
         //未提交数量
         wsmng = (TextView) findViewById(R.id.wsmng);
+        wsmng.setFocusable(false);
         //入库日期
         zgrdate = (TextView) findViewById(R.id.zgrdate);
+        zgrdate.setFocusable(false);
 
         //入库数量
         menge = (EditText) findViewById(R.id.menge);
@@ -130,6 +138,7 @@ public class ProductionOrderActivity extends AppCompatActivity {
         meins = (EditText) findViewById(R.id.meins);
         meins.setInputType(InputType.TYPE_NULL);
         meins.setOnClickListener(BtnClicked);
+        meins.setFocusable(false);
         //入库地
         lgort = (EditText) findViewById(R.id.lgort);
         lgort.setInputType(InputType.TYPE_NULL);
@@ -304,66 +313,71 @@ public class ProductionOrderActivity extends AppCompatActivity {
                     overdialog.show();
                     break;
                 case R.id.ok:
-                    if (!zipcode.getText().toString().equals("")
-                            || !menge.getText().toString().equals("")
-                            || !meins.getText().toString().equals("")
-                            || !lgort.getText().toString().equals("")) {
-                        //修改后赋值
-                        // 正则判断下是否输入值为数字
-                        Pattern p2 = Pattern.compile("\\d");
-                        String menge1 = menge.getText().toString().trim();
-                        Matcher matcher = p2.matcher(menge1);
-                        if (matcher.matches()) {
-                            Toast.makeText(getApplicationContext(), "请填写准确的物料码...", Toast.LENGTH_SHORT).show();
-                        } else {
-                            zpoGsmvt.setMenge(menge.getText().toString());
-                        }
-                        //单位
-                        if (!"".equals(meins.getText().toString().trim())) {
-                            if ("个".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("GE");
-                            } else if ("盒".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("HE");
-                            } else if ("袋".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("DAI");
-                            } else if ("公斤".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("KG");
-                            } else if ("箱".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("BOX");
-                            } else if ("杯".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("BEI");
-                            } else if ("套".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("TAO");
-                            } else if ("锅".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("GUO");
-                            } else if ("包".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("BAO");
-                            } else if ("片".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("PIA");
-                            } else if ("瓶".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("PIN");
-                            } else if ("提".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("TI");
-                            } else if ("卷".equals(meins.getText().toString().trim())) {
-                                zpoGsmvt.setMeins("JUA");
+                    if (!zipcode.getText().toString().equals("")) {//首先托盘编码不能为空
+                        if (!menge.getText().toString().equals("")
+                                || !meins.getText().toString().equals("")
+                                || !lgort.getText().toString().equals("")) {//可编辑的几个值不能为空
+                            // 正则判断下是否输入值为数字
+                            Pattern p2 = Pattern.compile("\\d");
+                            String menge1 = menge.getText().toString().trim();
+                            Matcher matcher = p2.matcher(menge1);
+                            //入库数量<=托盘数量
+                            Double a = Double.parseDouble(menge1);//入库数量
+                            Double b = Double.parseDouble(ztwm004.getMenge());//托盘数量
+                            if (matcher.matches()) {
+                                Toast.makeText(getApplicationContext(), "请填写准确的物料码...", Toast.LENGTH_SHORT).show();
+                            } else if (a > b) {
+                                Toast.makeText(getApplicationContext(), "入库数量不能大于托盘数量...", Toast.LENGTH_SHORT).show();
                             } else {
-                                zpoGsmvt.setMeins("BOX");
+                                zpoGsmvt.setMenge(menge.getText().toString());
+                            }
+                            //单位
+                            if (!"".equals(meins.getText().toString().trim())) {
+                                if ("个".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("GE");
+                                } else if ("盒".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("HE");
+                                } else if ("袋".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("DAI");
+                                } else if ("公斤".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("KG");
+                                } else if ("箱".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("BOX");
+                                } else if ("杯".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("BEI");
+                                } else if ("套".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("TAO");
+                                } else if ("锅".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("GUO");
+                                } else if ("包".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("BAO");
+                                } else if ("片".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("PIA");
+                                } else if ("瓶".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("PIN");
+                                } else if ("提".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("TI");
+                                } else if ("卷".equals(meins.getText().toString().trim())) {
+                                    zpoGsmvt.setMeins("JUA");
+                                } else {
+                                    zpoGsmvt.setMeins("BOX");
+                                }
+                            }
+                            zpoGsmvt.setLgort(lgort.getText().toString());
+                            Object[] obj = new Object[]{zpoGminfo, zpoGsmvt, ztwm004, IvMtart, IvRaube};
+                            try {
+                                new creatProductionOrder().execute(obj);
+                                Thread.sleep(50);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
                             }
                         }
-                        zpoGsmvt.setLgort(lgort.getText().toString());
-                        Object[] obj = new Object[]{zpoGminfo,zpoGsmvt,ztwm004,IvMtart,IvRaube};
-                        try {
-                            new creatProductionOrder().execute(obj);
-                            Thread.sleep(50);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-
                     } else {
-                        Toast.makeText(getApplicationContext(), "托盘编码为空，必填字段为空，不能入库操作，请重新操作！", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "托盘编码为空，不能入库操作，请重新操作！", Toast.LENGTH_SHORT).show();
                     }
                     break;
                 case R.id.cancel:
+                    zipcode.setText(null);
                     zkurno.setText(null);
                     name1.setText(null);
                     matnr.setText(null);

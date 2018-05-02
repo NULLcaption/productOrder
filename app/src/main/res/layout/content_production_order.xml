@@ -85,6 +85,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/zkurno"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -96,6 +97,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1.70"
                         android:inputType="text"
+                        android:focusable="false"
                         android:textColor="@android:color/holo_blue_light"
                         android:textSize="16sp">
 
@@ -115,6 +117,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/name1"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -125,11 +128,12 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_weight="1.70"
+                        android:focusable="false"
                         android:inputType="text"
                         android:textColor="@android:color/holo_blue_light"
                         android:textSize="16sp">
 
-                        <requestFocus/>
+                        <requestFocus />
                     </TextView>
                 </TableRow>
 
@@ -145,6 +149,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/matnr"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -156,10 +161,11 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1.70"
                         android:inputType="text"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp">
 
-                        <requestFocus/>
+                        <requestFocus />
                     </TextView>
                 </TableRow>
 
@@ -175,6 +181,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/maktx"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -186,6 +193,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1.70"
                         android:inputType="text"
+                        android:focusable="false"
                         android:textColor="@android:color/holo_blue_light"
                         android:textSize="16sp">
 
@@ -204,6 +212,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/zproddate"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -215,6 +224,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1.70"
                         android:inputType="text"
+                        android:focusable="false"
                         android:textColor="@android:color/holo_blue_light"
                         android:textSize="16sp">
 
@@ -234,6 +244,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/zcupno"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -245,6 +256,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1.70"
                         android:inputType="text"
+                        android:focusable="false"
                         android:textColor="@android:color/holo_blue_light"
                         android:textSize="16sp">
 
@@ -265,6 +277,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/number"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -276,6 +289,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1.70"
                         android:inputType="text"
+                        android:focusable="false"
                         android:textColor="@android:color/holo_blue_light"
                         android:textSize="16sp">
 
@@ -295,6 +309,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/menge"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -327,6 +342,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/meins"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -359,6 +375,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/lgort"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -391,6 +408,7 @@
                         android:layout_marginTop="5dp"
                         android:digits="@+id/text"
                         android:text="@string/zgrdate"
+                        android:focusable="false"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"/>
 
@@ -402,6 +420,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1.70"
                         android:inputType="text"
+                        android:focusable="false"
                         android:textColor="@android:color/holo_blue_light"
                         android:textSize="16sp">
 
