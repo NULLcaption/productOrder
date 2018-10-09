@@ -40,9 +40,9 @@ public class WebserviceUtils {
     public static String SOAP_ACTION_003 = NAMESPACE + "/" + METHOD_NAME_003;
 
     //请求的webservice路径
-    public static final String URL_001 = "http://192.168.0.16:8000/sap/bc/srt/rfc/sap/zproduction_order_pallet_info/700/zproduction_order_pallet_info/binding?sap-client=700&sap-user=rfc&sap-password=poiuyt";
-    public static final String URL_002 = "http://192.168.0.16:8000/sap/bc/srt/rfc/sap/zwmits4/700/zwmits4/binding?sap-client=700&sap-user=rfc&sap-password=poiuyt";
-    public static final String URL_003 = "http://192.168.0.16:8000/sap/bc/srt/rfc/sap/zproduction_order_goodsmvt/700/zproduction_order_goodsmvt/binding?sap-client=700&sap-user=rfc&sap-password=poiuyt";
+    public static final String URL_001 = "http://sap/bc/srt/rfc/sap/zproduction_order_pallet_info/700/zproduction_order_pallet_info/binding";
+    public static final String URL_002 = "http://sap/bc/srt/rfc/sap/zwmits4/700/zwmits4/binding";
+    public static final String URL_003 = "http://sap/bc/srt/rfc/sap/zproduction_order_goodsmvt/700/zproduction_order_goodsmvt/binding;
 
 
     /**
